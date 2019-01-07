@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>layout 后台大布局 - Layui</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-side layui-bg-black " style="position: static;">
+				<div class="layui-side-scroll ">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree layui-nav-side layui-bg-blue" lay-filter="test">
+						<a href="javascript:;">
+							<img src="layui/images/logo.png" height="40" width="120" class="layui-col-md-offset3">
+						</a>
+						<li>功能导航</li>
+						<li class="layui-nav-item">
+							<a class="" href="javascript:;">热点关注</a>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="javascript:;">预测分析</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="index1.html">列表一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">列表二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">列表三</a>
+								</dd>
+								<dd>
+									<a href="">超链接</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">报表查询</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">列表一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">列表二</a>
+								</dd>
+								<dd>
+									<a href="">超链接</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="">云市场</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="">发布商品</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="layui-body" style="position: absolute;top: 0;">
+				<div class="layui-header ">
+					<!-- 头部区域（可配合layui已有的水平导航） -->
+					<ul class="layui-nav layui-layout-right">
+						<li class="layui-nav-item">
+							<a href="">
+								<i class="layui-icon layui-icon-notice" style="font-size: 20px;" ; "></i>
+							</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:; ">
+								<img src="img/avatar-1.jpg " class="layui-nav-img "> <span><span>ME</span><span>系统管理员</span></span>
+							</a>
+							<dl class="layui-nav-child ">
+								<dd>
+									<a href=" ">基本资料</a>
+								</dd>
+								<dd>
+									<a href=" ">安全设置</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+
+				<div class="layui-body " style="position: absolute;left: 0; ">
+					<!-- 内容主体区域 -->
+					<div class="layui-row ">
+						<h2 class="layui-col-md3 ">Basic Tables</h2>
+						<div class="layui-col-md3 layui-col-md-offset6 ">
+							<span class="layui-breadcrumb " lay-separator=">">
+								<a href="">Hyper</a>
+								<a href="">Tables</a>
+								<a href="">Basic Tables</a>
+								</span>
+				</div>
+			</div>
+			<div class="layui-fluid">
+				<div class="layui-row layui-col-space30">
+					<div class="layui-col-md5" style="margin-left: 30px;">
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>Basic example</h3>
+								<p style="line-height: 1.5">
+									For basic styling—light padding and only horizontal dividers—add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:300px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th width="20%">Name</th>
+												<th width="25%">Phone Number</th>
+												<th width="30%">Date of Birth</th>
+												<th width="25%">Active?</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Risa D. Pearson</td>
+												<td>336-508-2157</td>
+												<td>July 24, 1950</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭" checked>
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<td>Ann C. Thompson</td>
+												<td>646-473-2057</td>
+												<td>January 25, 1959</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭" checked>
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<td>Paul J. Friend</td>
+												<td>281-308-0793</td>
+												<td>September 1, 1939</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭">
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<td>Linda G. Smith</td>
+												<td>606-253-1207</td>
+												<td>JMay 3, 1962</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭">
+													</form>
+												</td>
+											</tr>
+										</tbody>
+
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>Striped rows</h3>
+								<p style="line-height: 1.5">
+									Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:350px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>User</th>
+												<th>Account No.</th>
+												<th>Balance</th>
+												<th>Action</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<img src="img/avatar-2.jpg " class="layui-nav-img ">Risa D. Pearson
+												</td>
+												<td>AC336 508 2157</td>
+												<td>July 24, 1950</td>
+												<td>
+													<a href=""><i class="layui-icon layui-icon-edit" style="font-size: 20px;"></i></a>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="img/avatar-3.jpg " class="layui-nav-img ">Ann C. Thompson
+
+												</td>
+												<td>SB646 473 2057</td>
+												<td>January 25, 1959</td>
+
+												<td>
+													<a href=""><i class="layui-icon layui-icon-edit" style="font-size: 20px;"></i></a>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="img/avatar-4.jpg " class="layui-nav-img ">Paul J. Friend
+
+												</td>
+												<td>DL281 308 0793</td>
+												<td>September 1, 1939</td>
+
+												<td>
+													<a href=""><i class="layui-icon layui-icon-edit" style="font-size: 20px;"></i></a>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="img/avatar-5.jpg " class="layui-nav-img ">Sean C. Nguyen
+
+												</td>
+												<td>CA269 714 6825</td>
+												<td>February 5, 1994</td>
+
+												<td>
+													<a href=""><i class="layui-icon layui-icon-edit" style="font-size: 20px;"></i></a>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+										</tbody>
+
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>Hoverable rows</h3>
+								<p style="line-height: 1.5">
+									Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:300px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th width="30%">Product</th>
+												<th width="20%">Price</th>
+												<th width="25%">Quantity</th>
+												<th width="25%">Amount</th>
+											</tr>
+										</thead>
+										<tr>
+											<td>ASOS Ridley High Waist</td>
+											<td>$79.49</td>
+											<td><span class="layui-badge layui-bg-black">82 PCS</span></td>
+											<td>$6,518.18</td>
+										</tr>
+										<tr>
+											<td>Marco Lightweight Shirt</td>
+											<td>$128.50</td>
+											<td><span class="layui-badge layui-bg-black">37 Pcs</span></td>
+											<td>$4,754.50</td>
+										</tr>
+										<tr>
+											<td>Half Sleeve Shirt</td>
+											<td>$39.99</td>
+											<td><span class="layui-badge layui-bg-black">64 Pcs</span></td>
+											<td>$2,559.36</td>
+										</tr>
+										<tr>
+											<td>Lightweight Jacket</td>
+											<td>$20.00</td>
+											<td><span class="layui-badge layui-bg-black">184 Pcs</span></td>
+											<td>$3,680.00</td>
+										</tr>
+
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>Table head options</h3>
+								<p style="line-height: 1.5">
+									Use one of two modifier classes to make <code>&lt;thead&gt;</code>s appear light or dark gray.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:300px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th width="30%">Product</th>
+												<th width="20%">Courier</th>
+												<th width="25%">Quantity</th>
+												<th width="25%">Status</th>
+											</tr>
+										</thead>
+										<tr>
+											<td>ASOS Ridley High Waist</td>
+											<td>FedEx</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-green" lay-percent="100%"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-green"></span> Delivered</td>
+										</tr>
+										<tr>
+											<td>Marco Lightweight Shirt</td>
+											<td>DHL</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-orange" lay-percent="50%"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-orange"></span> Shipped</td>
+										</tr>
+										<tr>
+											<td>Half Sleeve Shirt</td>
+											<td>Bright</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-blue" lay-percent="25%"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-blue"></span> Order Received</td>
+										</tr>
+										<tr>
+											<td>Lightweight Jacket</td>
+											<td>FedEx</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-green" lay-percent="100"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-green"></span> Delivered</td>
+										</tr>
+
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-md5">
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>INVERSE TABLE</h3>
+								<p style="line-height: 1.5">
+									You can also invert the colors—with light text on dark backgrounds—with <code>.table-dark</code>.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:350px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th width="20%">Name</th>
+												<th width="25%">Phone Number</th>
+												<th width="30%">Date of Birth</th>
+												<th width="25%">Active?</th>
+											</tr>
+										</thead>
+										<tbody style="background-color: #000000;">
+											<tr>
+												<td>Risa D. Pearson</td>
+												<td>336-508-2157</td>
+												<td>July 24, 1950</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭">
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<td>Ann C. Thompson</td>
+												<td>646-473-2057</td>
+												<td>January 25, 1959</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭" checked>
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<td>Paul J. Friend</td>
+												<td>281-308-0793</td>
+												<td>September 1, 1939</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭">
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<td>Sean C. Nguyen</td>
+												<td>269-714-6825</td>
+												<td>February 5, 1994</td>
+												<td>
+													<form class="layui-form" action="">
+														<input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭" checked>
+													</form>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>BORDERED TABLE</h3>
+								<p style="line-height: 1.5">
+									Add <code>.table-bordered</code> for borders on all sides of the table and cells.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:350px;">
+									<table class="layui-table">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>User</th>
+												<th>Account No.</th>
+												<th>Balance</th>
+												<th>Action</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<img src="img/avatar-6.jpg " class="layui-nav-img ">Risa D. Pearson
+												</td>
+												<td>AC336 508 2157</td>
+												<td>July 24, 1950</td>
+												<td>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="img/avatar-7.jpg " class="layui-nav-img ">Ann C. Thompson
+
+												</td>
+												<td>SB646 473 2057</td>
+												<td>January 25, 1959</td>
+
+												<td>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="img/avatar-8.jpg " class="layui-nav-img ">Paul J. Friend
+
+												</td>
+												<td>DL281 308 0793</td>
+												<td>September 1, 1939</td>
+
+												<td>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="img/avatar-9.jpg " class="layui-nav-img ">Sean C. Nguyen
+
+												</td>
+												<td>CA269 714 6825</td>
+												<td>February 5, 1994</td>
+
+												<td>
+													<a href=""><i class="layui-icon layui-icon-delete" style="font-size: 20px;"></i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>Small table</h3>
+								<p style="line-height: 1.5">
+									Add <code>.table-sm</code> to make tables more compact by cutting cell padding in half.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:300px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th width="40%">Product</th>
+												<th width="15%">Price</th>
+												<th width="25%">Quantity</th>
+												<th width="20%">Amount</th>
+											</tr>
+										</thead>
+										<tr>
+											<td>ASOS Ridley High Waist</td>
+											<td>$79.49</td>
+											<td><span class="layui-badge layui-bg-black">82 PCS</span></td>
+											<td>$6,518.18</td>
+										</tr>
+										<tr>
+											<td>Marco Lightweight Shirt</td>
+											<td>$128.50</td>
+											<td><span class="layui-badge layui-bg-black">37 Pcs</span></td>
+											<td>$4,754.50</td>
+										</tr>
+										<tr>
+											<td>Half Sleeve Shirt</td>
+											<td>$39.99</td>
+											<td><span class="layui-badge layui-bg-black">64 Pcs</span></td>
+											<td>$2,559.36</td>
+										</tr>
+										<tr>
+											<td>Lightweight Jacket</td>
+											<td>$20.00</td>
+											<td><span class="layui-badge layui-bg-black">184 Pcs</span></td>
+											<td>$3,680.00</td>
+										</tr>
+										<tr>
+											<td>Marco Shoes</td>
+											<td>$28.49</td>
+											<td><span class="layui-badge layui-bg-black">184 Pcs</span></td>
+											<td>$1,965.81</td>
+										</tr>
+										<tr>
+											<td>ASOS Ridley High Waist</td>
+											<td>$79.49</td>
+											<td><span class="layui-badge layui-bg-black">184 Pcs</span></td>
+											<td>$6,518.18</td>
+										</tr>
+
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>Contextual with background color</h3>
+								<p style="line-height: 1.5">
+									Use contextual classes to color table rows or individual cells.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:300px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th width="40%">Product</th>
+												<th width="20%">Courier</th>
+												<th width="20%">Quantity</th>
+												<th width="20%">Status</th>
+											</tr>
+										</thead>
+										<tr class="layui-bg-blue">
+											<td>ASOS Ridley High Waist</td>
+											<td>FedEx</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-green" lay-percent="100%"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-green"></span> Delivered</td>
+										</tr>
+										<tr>
+											<td>Marco Lightweight Shirt</td>
+											<td>DHL</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-orange" lay-percent="50%"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-orange"></span> Shipped</td>
+										</tr>
+										<tr class="layui-bg-red">
+											<td>Half Sleeve Shirt</td>
+											<td>Bright</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-blue" lay-percent="25%"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-blue"></span> Order Received</td>
+										</tr>
+										<tr>
+											<td>Lightweight Jacket</td>
+											<td>FedEx</td>
+											<td>
+												<div class="layui-progress">
+  													<div class="layui-progress-bar layui-bg-green" lay-percent="100"></div>
+												</div>
+											</td>
+											<td><span class="layui-badge-dot layui-bg-green"></span> Delivered</td>
+										</tr>
+
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-md10" style="margin-left: 30px;">
+						<div class="layui-card">
+							<div class="layui-card-header" style="height:100px;">
+								<h3>Always responsive</h3>
+								<p style="line-height: 1.5">
+									Across every breakpoint, use
+                                            <code>.table-responsive</code> for horizontally scrolling tables. Use
+                                            <code>.table-responsive{-sm|-md|-lg|-xl}</code> as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave
+                                            normally and not scroll horizontally.
+								</p>
+
+							</div>
+							<div class="layui-card-body">
+								<div id="chart1" style="width: 100%;height:350px;">
+									<table class="layui-table" lay-skin="line">
+										<colgroup>
+											<col width="150">
+											<col width="200">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Heading</th>
+												<th>Heading</th>
+												<th>Heading</th>
+												<th>Heading</th>
+												<th>Heading</th>
+												<th>Heading</th>
+												<th>Heading</th>
+												<th>Heading</th>
+												<th>Heading</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+												<td>Cell</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="layui-footer ">
+			<!-- 底部固定区域 -->
+			© layui.com - 底部固定区域
+		</div>
+		</div>
+		</div>
+		<script src="../src/layui.js "></script>
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function() {
+				var element = layui.element;
+
+			});
+		</script>
+	</body>
+	<script type="text/javascript " src="layui/layui.all.js "></script>
+
+</html>
